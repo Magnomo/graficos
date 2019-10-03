@@ -1,9 +1,31 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-    body
-    p ola mundo
+extends layout
+block main
+  .container
+
+    .row(style="margin-bottom:30px")
+
+      .col
+        .card
+          .car-body.container
+            h1 cadastro de clientes
+            .form-group
+              label(for="nome") Nome
+              input(type="text" id="nome" class="form-control")
+            .form-group
+              .form-check.form-check-inline
+                input(type="radio" id="masculino" class="form-check-input" name="sexo" data-value="1")
+                label(for="masculino" class="form-check-label") Masculino
+              .form-check.form-check-inline
+                input(type="radio" id="feminino" class="form-check-input" name="sexo" data-value="2")
+                label(for="feminino" class="form-check-label") Feminino
+            button(class="btn btn-info" id="Cadastrar") Cadastrar
+    .row(style="margin-bottom:30px")
+      .col-6
+        .card
+          .car-body
+            p Graficos
+      .col-6
+        .card
+          .car-body
+            p Graficos
+
